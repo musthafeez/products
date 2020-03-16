@@ -1,0 +1,41 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h2>Products</h2>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Product ID</th>
+					<th>Category Type</th>
+					<th>Create Time</th>
+					<th>Product Description</th>
+					<th>Icon</th>
+					<th>Name</th>
+					<th>Price</th>
+					<th>Status</th>
+					<th>Stock</th>
+					<th>Update Time</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let prod of products | async">
+					<td>{{prod.product_id}}</td>
+					<td>{{prod.category_type}}</td>
+					<td>{{prod.create_time}}</td>
+					<td>{{prod.product_description}}</td>
+					<td><img src="{{prod.product_icon}}"></td>
+					<td>{{prod.product_name}}</td>
+					<td>{{prod.product_price}}</td>
+					<td>{{prod.product_status}}</td>
+					<td>{{prod.product_stock}}</td>
+					<td>{{prod.update_time}}</td>__
+				</tr>
+			</tbody>
+
+		</table>
+		
+	</div>
+	
+
+</div>
